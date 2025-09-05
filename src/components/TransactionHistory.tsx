@@ -65,9 +65,15 @@ const TransactionHistory: React.FC<TransactionHistoryProps> = ({ points }) => {
             </div>
             
             {point.txHash && (
-              <button className="ml-2 p-1 text-gray-400 hover:text-gray-600 transition-colors">
+              <a 
+                href={`https://etherscan.io/tx/${point.txHash}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="ml-2 p-1 text-gray-400 hover:text-gray-600 transition-colors"
+                title="View on Etherscan"
+              >
                 <ExternalLink className="h-4 w-4" />
-              </button>
+              </a>
             )}
           </div>
         ))}
